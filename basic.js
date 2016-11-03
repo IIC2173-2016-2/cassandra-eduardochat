@@ -38,7 +38,7 @@ client.execute(query_1, function (err, result) {
 });
 
 var query_3 = 'INSERT INTO arquicoins.purchase_transactions (purchase_transactions_id, purchase_transactions_server_id, purchase_transactions_user_id, purchase_transactions_amount, purchase_transactions_created_at) VALUES (?, ?, ?, ?, ?)';
-var params = [1, some_server , some_user_id, some_amount,  Date().toISOString()];
+var params = [1, some_server , some_user_id, some_amount,  new Date().toISOString()];
 client.execute(query_3, params, { prepare: true }, function (err) {
   assert.ifError(err);
 });
@@ -51,7 +51,7 @@ client.execute(query_1, function (err, result) {
 });
 
 var query_3 = 'INSERT INTO arquicoins.gift_transactions (gift_transactions_id, gift_transactions_origin_user_id, gift_transactions_end_user_id, gift_transactions_amount, gift_transactions_created_at) VALUES (?, ?, ?, ?, ?)';
-var params = [1, some_user_id , some_user_id, some_amount,  Date().toISOString()];
+var params = [1, some_user_id , some_user_id, some_amount,  new Date().toISOString()];
 client.execute(query_3, params, { prepare: true }, function (err) {
   assert.ifError(err);
 });
