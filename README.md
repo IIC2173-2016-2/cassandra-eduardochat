@@ -16,6 +16,19 @@ Puedes desactivar facilmente el proceso con `ctrl + c`
 ```
 $ bin/cqlsh 127.0.0.1 9042
 ```
+
+- Para importar el `schema` utilizado, descargar el archivo `schema.cql` y almacenar en la carpeta (saltar eso ultimo si se clono la carpeta). Luego correr el siguiente comando
+
+```
+bin/cqlsh 127.0.0.1 9042 -f 'schema.cql'
+```
+- Al archivo `basic.js`
+contiene la forma básica para realizar las consultas. Para poder funcionar con node, se debe tener el driver de cassandra instalado.
+```
+$ npm install cassandra-driver
+$ npm install async
+```
+
 - Check out the following link for CQL documentation https://www.tutorialspoint.com/cassandra/cassandra_quick_guide.html
 - For more detaile CQL specification https://docs.datastax.com/en/cql/3.1/cql/cql_reference/create_keyspace_r.html
 
